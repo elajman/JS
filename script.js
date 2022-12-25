@@ -25,17 +25,21 @@ function validoLogin(){
         }
     }
 
-        let montoSolicitado = Number(prompt("Ingrese el Monto solicitado"))
-        let salario = Number(prompt("Ingreso el monto de sus ingresos mensuales que debe superar el credito solicitado"))
+        
        
     function prestamoPersonal(){
-       
- 
-        while (salario < montoSolicitado) {
+        let montoSolicitado = Number(prompt("Ingrese el Monto solicitado"))   
+            if (montoSolicitado <= 0) {
+                alert("Ingrese un monto superior a 0")
+                montoSolicitado = Number(prompt("Vuelva a ingresar el Monto solicitado"))
+            }
+        let salario = Number(prompt("Ingreso el monto de sus ingresos mensuales que debe superar el credito solicitado"))
+            while (salario < montoSolicitado) {
             alert("debe ingresar un monto menor a sus ingresos")
             salario = Number(prompt("Vuela a ingresar un importe menor a sus ingresos"))
-        }
-
+                
+            }
+            
             let plazo = Number(prompt("Ingrese el plazo en cantidad de meses para la devolucion"))
                 alert(`El Monto solicitado es  $${montoSolicitado} a devolver en ${plazo} Meses, si es correcto haga click en Ok para continuar.`)
             const porcentajeInteres = 10
