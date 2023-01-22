@@ -87,6 +87,7 @@ alert('Bienvenido a nuestra tienda Online, haga click para vel los productos en 
 function tienProductos(){
         let seleccionoProducto = []
         let nuevoArray = []
+        //let seleccionMarca = prompt(`Por favor seleccione una MARCA la lista de productos: /n${relojes}`)
         let seleccionMarca = prompt(`Por favor seleccione una MARCA la lista de productos: /n${JSON.stringify(relojes)}`)
         if (!seleccionMarca) {
             alert('Ingrese un poducta de la list')
@@ -117,6 +118,6 @@ function tienProductos(){
         
     tienProductos()
     
-
+    
 
 
